@@ -19,50 +19,69 @@
         .container {
             text-align: center;
             position: relative;
-            z-index: 2; /* Чтобы текст был поверх */
         }
+        /* Текст */
+        .text {
+            z-index: 2;
+            position: relative;
+        }
+        .text h1, .text p {
+            margin: 10px;
+        }
+
+        /* Змея */
         .snake {
             position: absolute;
-            bottom: 10px;
+            bottom: 0;
             left: 50%;
-            width: 200px;
-            height: 60px;
-            background: #3e9f43; /* Зеленая змея */
-            border-radius: 30px;
             transform: translateX(-50%);
+            width: 300px;
+            height: 80px;
+            background: #3e9f43; /* Зеленая змея */
+            border-radius: 50px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            animation: slither 3s infinite ease-in-out;
+            align-items: center;
+            animation: slither 5s infinite ease-in-out;
         }
+
+        /* Голова змеи */
         .snake .head {
-            width: 40px;
-            height: 40px;
+            position: absolute;
+            top: -30px;
+            width: 50px;
+            height: 50px;
             background-color: #3e9f43;
             border-radius: 50%;
-            position: absolute;
-            top: -25px;
-        }
-        .snake .eyes {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 10px;
-            width: 24px;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        /* Глаза змеи */
+        .snake .eyes {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 24px;
         }
         .snake .eye {
             width: 8px;
             height: 8px;
-            background-color: black;
+            background-color: white;
             border-radius: 50%;
         }
+
+        /* Анимация движения змеи */
         @keyframes slither {
             0% { transform: translateX(-50%) translateX(0); }
             50% { transform: translateX(-50%) translateX(30px); }
             100% { transform: translateX(-50%) translateX(0); }
         }
+
+        /* Анимация сердечек */
         .hearts {
             position: absolute;
             top: 10%;
@@ -74,23 +93,10 @@
             50% { transform: scale(1.2); opacity: 0.8; }
             100% { transform: scale(1); opacity: 1; }
         }
-        .text {
-            z-index: 1; /* Текст на переднем плане */
-        }
-        .text h1, .text p {
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="snake">
-            <div class="head"></div>
-            <div class="eyes">
-                <div class="eye"></div>
-                <div class="eye"></div>
-            </div>
-        </div>
         <div class="hearts">❤️❤️❤️</div>
         <div class="text">
             <h1>Моя любимая жаным!</h1>
@@ -98,6 +104,13 @@
             <p>Ты самая сильная и замечательная девушка, которую я знаю, и я верю, что ты справишься со всем.</p>
             <p>Я люблю тебя больше всего на свете. И помни, после каждой бури всегда выходит солнце.</p>
             <p>И я обещаю быть твоим солнцем, пока ты не почувствуешь себя лучше. Я люблю тебя.</p>
+        </div>
+        <div class="snake">
+            <div class="head"></div>
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
         </div>
     </div>
 </body>
