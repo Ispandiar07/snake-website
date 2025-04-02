@@ -1,5 +1,5 @@
 body {
-    background-color: #fce4ec; /* Пастельный розовый */
+    background-color: #ffe4e1; /* Светло-розовый */
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -16,18 +16,19 @@ body {
     text-align: center;
 }
 
-.snake-container img {
-    max-width: 200px;
+.cats-container img {
+    max-width: 300px;
     margin-bottom: 20px;
+    animation: catsMove 5s linear infinite alternate; /* Анимация движения */
 }
 
-h1 {
+.poem-container {
+    font-size: 1.2em;
     color: #e91e63; /* Ярко-розовый */
-    margin-bottom: 20px;
+    white-space: pre-line; /* Сохраняет переносы строк */
 }
 
-p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 15px;
+@keyframes catsMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(15px); }
 }
