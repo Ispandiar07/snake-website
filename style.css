@@ -14,18 +14,30 @@ body {
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 800px; /* Ограничение ширины для лучшей читаемости */
 }
 
 .cats-container img {
-    max-width: 300px;
+    max-width: 200px; /* Уменьшим размер котиков, чтобы не отвлекали от текста */
     margin-bottom: 20px;
     animation: catsMove 5s linear infinite alternate; /* Анимация движения */
 }
 
-.poem-container {
-    font-size: 1.2em;
-    color: #e91e63; /* Ярко-розовый */
-    white-space: pre-line; /* Сохраняет переносы строк */
+.apology-container {
+    font-size: 1.1em;
+    color: #333; /* Более спокойный цвет текста */
+    line-height: 1.7;
+    text-align: left; /* Выравнивание текста по левому краю для лучшей читаемости длинного текста */
+}
+
+h1 {
+    color: #e91e63; /* Ярко-розовый для заголовка */
+    margin-bottom: 20px;
+    text-align: center; /* Заголовок по центру */
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 @keyframes catsMove {
